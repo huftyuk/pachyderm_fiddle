@@ -1,4 +1,4 @@
 FROM python
 
 # Add our own code.
-ADD processparams.py /processparams.py
+ADD ProcessTrackParams.py /ProcessTrackParams.py
