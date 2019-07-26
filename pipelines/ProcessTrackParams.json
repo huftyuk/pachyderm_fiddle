@@ -5,11 +5,11 @@
   "input": {
     "pfs": {
       "glob": "/*",
-      "repo": "images"
+      "repo": "trackparams"
     }
   },
   "transform": {
-    "cmd": [ "python3", "/edges.py" ],
+    "cmd": [ "python3", "/ProcessTrackParams.py" ],
     "image": "python"
   }
 }
