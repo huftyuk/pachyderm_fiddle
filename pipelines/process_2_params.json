@@ -1,0 +1,15 @@
+{
+  "pipeline": {
+    "name": "track"
+  },
+  "input": {
+    "pfs": {
+      "glob": "/*",
+      "repo": "images"
+    }
+  },
+  "transform": {
+    "cmd": [ "python3", "/edges.py" ],
+    "image": "python"
+  }
+}
