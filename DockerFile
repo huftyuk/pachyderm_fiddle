@@ -1,4 +1,4 @@
 FROM python
 
 # Add our own code.
-ADD edges.py /processparams.py
+ADD processparams.py /processparams.py
