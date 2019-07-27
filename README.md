@@ -3,9 +3,13 @@ A simple play at this
 
 # Setup a kubernetes cluster 
 First thing you need to do is setup a kubernetes cluster.  This is all based on the instructions in 
+
 CLUSTER_NAME="pach-cluster"
+
 GCP_ZONE="us-west1-a"
+
 gcloud config set compute/zone ${GCP_ZONE}
+
 gcloud config set container/cluster ${CLUSTER_NAME}
 MACHINE_TYPE="n1-standard-2"
 --By default the following command spins up a 3-node cluster. You can change the default with `--num-nodes VAL`.
