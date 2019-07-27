@@ -8,8 +8,9 @@
       "repo": "trackparams"
     }
   },
-  "transform": {
-    "cmd": [ "python3", "/ProcessTrackParams.py" ],
-    "image": "huftyuk/pachyderm_fiddle"
+"transform": {
+  "cmd": [ "python3", "/ProcessTrackParams.py" ],
+  "image": "huftyuk/pachyderm_fiddle"
   }
 }
+
