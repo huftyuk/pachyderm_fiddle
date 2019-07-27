@@ -1,6 +1,6 @@
 {
   "pipeline": {
-    "name": "track"
+    "name": "track2"
   },
   "input": {
     "pfs": {
