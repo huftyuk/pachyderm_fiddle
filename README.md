@@ -56,6 +56,14 @@ pachctl create repo trackparams
 pachctl list repo
 
 # Create our pipeline
-pachctl create pipeline -f https://github.com/huftyuk/pachyderm_fiddle/blob/master/pipelines/ProcessTrackParams.json
+pachctl create pipeline -f https://raw.githubusercontent.com/huftyuk/pachyderm_fiddle/master/pipelines/ProcessTrackParams.json
 
+# Then add a file to the repo
+pachctl put file trackparams@master:test1.txt -f https://raw.githubusercontent.com/huftyuk/pachyderm_fiddle/master/paramfiles/track
+
+this will run the pipeline and we can then look at the result.
+
+pachctl list file track2@master
+
+pachctl get file track2@master:test1.txt
 
