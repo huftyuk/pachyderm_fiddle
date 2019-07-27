@@ -33,7 +33,7 @@ BUCKET_NAME="huftyukpackyderm"
 
 -- Create the bucket.
 
-$ gsutil mb gs://${BUCKET_NAME}
+gsutil mb gs://${BUCKET_NAME}
 
 # Run Pachyderm
 -- Install pachyderm if it ins't already
@@ -48,8 +48,14 @@ pachctl deploy google ${BUCKET_NAME} ${STORAGE_SIZE} --dynamic-etcd-nodes=1
 
 pachctl port-forward &
 
-Build the container
-docker build https://github.com/huftyuk/pachyderm_fiddle.git
-and then push it out to docker hub.
-However docker hub is built to simply build on demand so no need.
+# Create our initial repo
+pachctl create repo trackparams
+
+-- check it is there!
+
+pachctl list repo
+
+# Create our pipeline
+pachctl create pipeline -f https://github.com/huftyuk/pachyderm_fiddle/blob/master/pipelines/ProcessTrackParams.json
+
 
